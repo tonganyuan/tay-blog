@@ -1,11 +1,24 @@
 # 数据源配置
 spring:
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
-    driverClassName: com.mysql.cj.jdbc.Driver
-    druid:
-      # 主库数据源
-      master:
-        url: jdbc:mysql://${MYQSL_HOST:192.168.32.39}:${MYSQL_PORT:3307}/b2b_operation?useUnicode=true&useSSL=false&characterEncoding=utf8&allowMultiQueries=true&rewriteBatchedStatements=true&serverTimezone=Asia/Shanghai
-        username: root
-        password: Ynby_2022
+    type: com.zaxxer.hikari.HikariDataSource
+    username: root
+    password: Ynby_2022
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${MYQSL_HOST:192.168.32.39}:${MYSQL_PORT:3307}/b2b_operation?useUnicode=true&useSSL=false&characterEncoding=utf8&allowMultiQueries=true&rewriteBatchedStatements=true&serverTimezone=Asia/Shanghai
+    hikari:
+      # 池中维护的最小空闲连接数
+      min-idle: 5
+      # 池中最大连接数，包括闲置和使用中的连接
+      max-pool-size: 20
+      # 池中连接最长生命周期
+      max-lifetime: 1800000
+      # 自动提交从池中返回的连接
+      is-auto-commit: true
+      # 连接允许在池中闲置的最长时间
+      idle-timeout: 30000
+      # 等待来自池的连接的最大毫秒数
+      connection-timeout: 30000
+      # 连接池名称
+      pool-name: tay-blog-HikariCP
+
