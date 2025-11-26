@@ -1,0 +1,11 @@
+# 数据源配置
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    druid:
+      # 主库数据源
+      master:
+        url: jdbc:mysql://${MYQSL_HOST:192.168.32.39}:${MYSQL_PORT:3307}/b2b_operation?useUnicode=true&useSSL=false&characterEncoding=utf8&allowMultiQueries=true&rewriteBatchedStatements=true&serverTimezone=Asia/Shanghai
+        username: root
+        password: Ynby_2022

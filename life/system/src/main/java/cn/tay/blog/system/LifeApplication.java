@@ -1,4 +1,4 @@
-package cn.tay.blog.life;
+package cn.tay.blog.system;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
