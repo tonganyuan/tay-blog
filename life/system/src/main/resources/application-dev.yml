@@ -5,7 +5,7 @@ spring:
     druid:
       # 主库数据源
       master:
-        url: jdbc:mysql://localhost:3306/tay_blog?useUnicode=true&useSSL=false&characterEncoding=utf8&allowMultiQueries=true&rewriteBatchedStatements=true&serverTimezone=Asia/Shanghai
+        url: jdbc:mysql://localhost:3306/tay_blog?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&rewriteBatchedStatements=true&serverTimezone=Asia/Shanghai
         username: root
         password: root
       # 从库数据源
